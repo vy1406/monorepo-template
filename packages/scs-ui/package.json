@@ -1,22 +1,23 @@
 {
-  "name": "scs-ui",
+  "name": "@my-scope/scs-ui",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "files": ["dist"],
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
+  "type": "module",
+  "main": "src/index.tsx",
   "scripts": {
-    "build": "tsc && vite build"
+    "dev": "vite",
+    "build": "tsc",
+    "lint": "eslint ."
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.8.2",
-    "vite": "^6.2.4"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^6.2.0",
+    "typescript": "^5.7.2",
+    "@vitejs/plugin-react": "^4.3.4"
   }
 }
