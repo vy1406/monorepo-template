@@ -1,39 +1,42 @@
-## Resources:
-https://rachitabansal.medium.com/introduction-to-lerna-3fb7382a4d4e
-https://github.com/lerna/lerna
-https://www.linkedin.com/pulse/why-we-choose-lerna-monorepo-front-end-projects-marek-kowalski/
-https://github.com/ZackDeRose/demo-trivial-packages
+# 🔗 Lerna Monorepo Template – Shared Packages Made Easy
 
-# Usefull commands:
+A template project demonstrating how to use **Lerna** to manage multiple packages and apps in a monorepo setup.
 
-npx lerna init --dryRun
-npx lerna run build --scope=header --concurrency=5
-npx nx graph
+> Avoid copy-pasting shared code.  
+> Skip repeated `npm publish && npm install`.  
+> Just code, link, and reflect changes instantly.
 
+---
 
-remix vs rollup ? 
+## 🧠 Why This Template Exists
 
-personal presentation tips:
-1. problem  + solution
-2. nx + caching
-3. project graph
-4. publishing  - versioning
+In many projects, shared UI components, utilities, and configurations (like ESLint) are scattered or manually duplicated across apps.  
+This leads to time wasted on:
 
-to gpt:
+- Repeated publishing and installing
+- Manual symlinking
+- Redundant configuration
+- Lack of instant feedback
 
-ok, so i need you to create a basic lerna monorepo, for my presentation.
-those are the resources:
+### Common issues:
+- You want to **edit a shared button** and see it reflected in 10 apps immediately.
+- You want to **reuse ESLint config**, without creating another npm package.
+- You want to **split responsibilities** and keep code modular.
+- You **might** want to publish a package later, but not now.
 
-## Resources:
-https://rachitabansal.medium.com/introduction-to-lerna-3fb7382a4d4e
-https://github.com/lerna/lerna
-https://www.linkedin.com/pulse/why-we-choose-lerna-monorepo-front-end-projects-marek-kowalski/
-https://github.com/ZackDeRose/demo-trivial-packages
+---
 
+## 🧩 What's Inside
 
-package veersioning.
-to use publish them.
-
-npx lerna publish --no-private
-npx lerna publish from-package --scope @my/ui --no-private
-
+```bash
+.
+├── independent-app               # Simulates a separate project using published package
+│   └── package.json              # Depends on published public-lib
+│
+└── monorepo
+    ├── package.json              # Lerna + workspace setup
+    └── packages
+        ├── monorepo-app          # Local app(s) inside monorepo
+        ├── private-config        # Shared ESLint config (non-published)
+        ├── private-lib           # Shared UI components (e.g., Button)
+        └── public-lib            # Utility library – meant to be published
