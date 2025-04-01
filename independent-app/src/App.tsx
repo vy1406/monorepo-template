@@ -1,4 +1,4 @@
-import { parseDummyUtil } from "monorepo-external-lib"
+import { parseDummyUtil } from "monorepo-external-lib-public"
 
 function App() {
 
