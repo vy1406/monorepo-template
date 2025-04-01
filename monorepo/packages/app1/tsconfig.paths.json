@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "scs-contracts/*": ["../scs-contracts/src/*"]
+    }
+  }
+}
