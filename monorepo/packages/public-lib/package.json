@@ -1,18 +1,9 @@
 {
   "name": "monorepo-external-lib-public",
-  "version": "2.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsc"
-  },
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
+  "version": "2.0.1",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
   "devDependencies": {
     "typescript": "^5.8.2"
   }

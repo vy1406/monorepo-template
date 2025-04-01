@@ -1,1 +1,1 @@
-export * from './src/Dummy';
+export * from './src';

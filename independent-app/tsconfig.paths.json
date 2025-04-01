@@ -1,8 +1,8 @@
 {
-  // "compilerOptions": {
-  //   "baseUrl": ".",
-  //   "paths": {
-  //     "monorepo-external-lib-public/*": ["../monorepo/packages/public-lib/src/*"]
-  //   }
-  // }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "monorepo-external-lib-public": ["../monorepo/packages/public-lib/index.ts"]
+    }
+  }
 }

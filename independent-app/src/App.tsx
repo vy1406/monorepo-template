@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <p>External app</p>
-      {parseDummyUtil({ id: 1, name: "John Doe s" }).name}
+      {parseDummyUtil({ id: 1, name: "importing ... " }).name}
     </div>
   )
 }

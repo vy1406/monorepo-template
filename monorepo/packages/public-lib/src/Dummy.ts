@@ -6,6 +6,6 @@ export interface IDummy {
 export function parseDummyUtil(data: any): IDummy {
     return {
         id: String(data?.id || "-1"),
-        name: data.name + " parsed v04" || 'Unknown'
+        name: data.name + " from direct package sss" || 'Unknown'
     };
 }
